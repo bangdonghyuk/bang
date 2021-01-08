@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 class UpdateContent extends Component {
   render() {
+    console.log(this.props.data);
     console.log("UpdateContent");
     return (
       <article>
@@ -12,7 +13,6 @@ class UpdateContent extends Component {
           onSubmit={function (e) {
             e.preventDefault();
             this.props.onSubmit(e.target.title.value, e.target.desc.value);
-            alert("submit!!");
           }.bind(this)}
         >
           <p>
